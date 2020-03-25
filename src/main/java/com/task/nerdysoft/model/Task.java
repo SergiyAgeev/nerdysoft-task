@@ -8,7 +8,7 @@ import org.springframework.data.mongodb.core.mapping.Document;
 import org.springframework.format.annotation.DateTimeFormat;
 
 @Data
-@Document(collation = "tasks")
+@Document(collection = "tasks")
 public class Task {
     @Id
     private Long id;
