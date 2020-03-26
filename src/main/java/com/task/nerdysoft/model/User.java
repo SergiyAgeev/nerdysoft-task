@@ -1,18 +1,21 @@
 package com.task.nerdysoft.model;
 
 import java.util.List;
+import javax.persistence.Column;
 import lombok.Data;
 import org.springframework.data.annotation.Id;
 import org.springframework.data.mongodb.core.index.Indexed;
 import org.springframework.data.mongodb.core.mapping.DBRef;
 import org.springframework.data.mongodb.core.mapping.Document;
+import org.springframework.data.mongodb.core.mapping.MongoId;
 
 @Data
 @Document(collection = "users")
 public class User {
-    @Id
-    private Long id;
+    @MongoId
+    private String id;
     @Indexed
+    @Column(unique = true)
     private String username;
     @Indexed
     private String email;
@@ -24,5 +27,4 @@ public class User {
 
     @DBRef
     private List<Task> taskList;
-
 }

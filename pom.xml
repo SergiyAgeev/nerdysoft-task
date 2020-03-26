@@ -73,7 +73,6 @@
             <artifactId>spring-security-test</artifactId>
             <scope>test</scope>
         </dependency>
-
         <dependency>
             <groupId>org.hibernate.ogm</groupId>
             <artifactId>hibernate-ogm-mongodb</artifactId>
@@ -84,6 +83,7 @@
             <artifactId>narayana-jta</artifactId>
             <version>5.9.2.Final</version>
         </dependency>
+
     </dependencies>
 
     <build>
